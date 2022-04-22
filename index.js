@@ -36,7 +36,7 @@ async function run() {
             const regult = await serviceCollection.insertOne(service);
             res.send(regult);
         })
-        // Delete
+        // Delete one file
         app.delete('/service/:id', async (req, res) => {
             const id = req.params.id;
             const query = { _id: ObjectId(id) };
